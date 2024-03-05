@@ -14,8 +14,8 @@ function calculateCommissionFunction(lockQty, stockQty, barrelQty) {
     const totalSales = lockQty * lockCost + stockQty * stockCost + barrelQty * barrelCost;
 
     // Check if sales exceed any limits
-    if (lockQty > maxLocks && stockQty > maxStocks && barrelQty > maxBarrels) {
-        return "Sales quantities exceed maximum limits.";
+    if (lockQty > maxLocks || stockQty > maxStocks || barrelQty > maxBarrels) {
+        return [0,0];
     }
 
     // Commission rates
