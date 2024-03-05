@@ -1,14 +1,48 @@
 const  calculateCommissionFunction  = require('../CalculateComission');
 
 describe(
-    'classifyTriangle: Required input conditions -  See readme for more details', () =>
-
+    'CaclulateComission: Required input conditions -  See readme for more details', () =>
     {
-    test('should classify an Equilateral triangle', () => {
-        const [totalSales, commission] = calculateCommissionFunction(10, 10, 10);
+        test('Default test case', () => {
+            const [totalSales, commission] = calculateCommissionFunction(10, 20, 30);
 
-        expect(totalSales).toBe(300);
-        expect(commission).toBe(30);
+            expect(totalSales).toBe(1800);
+            expect(commission).toBe(263.25);
+        })
         
-    })
-});
+        // test('Default test case', () => {
+        //     const [totalSales, commission] = calculateCommissionFunction(35, 40, 45);
+
+        //     expect(totalSales).toBe();
+        //     expect(commission).toBe();
+        // })
+        
+        test('Default test case', () => {
+            expect(calculateCommissionFunction(35, 40, 91)).toBe('Sales quantities exceed maximum limits.');
+        })
+
+        test('Default test case', () => {
+            expect(calculateCommissionFunction(35, 81, 45)).toBe('Sales quantities exceed maximum limits.');
+        })
+
+        test('Default test case', () => {
+            expect(calculateCommissionFunction(71, 40, 45)).toBe('Sales quantities exceed maximum limits.');
+        })
+
+        test('Default test case', () => {
+            expect(calculateCommissionFunction(71, 81, 45)).toBe('Sales quantities exceed maximum limits.');
+        })
+
+        test('Default test case', () => {
+            expect(calculateCommissionFunction(35, 81, 91)).toBe('Sales quantities exceed maximum limits.');
+        })
+
+        test('Default test case', () => {
+            expect(calculateCommissionFunction(71, 40, 91)).toBe('Sales quantities exceed maximum limits.');
+        })
+
+        test('Default test case', () => {
+            expect(calculateCommissionFunction(71, 81, 91)).toBe('Sales quantities exceed maximum limits.');
+        })
+    }
+);
