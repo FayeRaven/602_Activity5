@@ -9,6 +9,8 @@ describe(
             expect(totalSales).toBe(1800);
             expect(commission).toBe(263.25);
         })
+
+        //test
         
         test('Default test case', () => {
             expect(calculateCommissionFunction(35, 40, 91)).toBe('Sales quantities exceed maximum limits.');

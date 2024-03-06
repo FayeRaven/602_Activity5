@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Checkout Repository # Arbitrary name
 # Checkout action fetches the repository code (GitHub built-in)
-        uses: actions/checkout@v2 
+        uses: actions/checkout@v2
       - name: Set up Node.js # The name to show up in GitHub logs
 
 # Setup-node action sets up a Node.js on the action (GitHub built-in)
